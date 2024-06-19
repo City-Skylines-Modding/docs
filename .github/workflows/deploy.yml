@@ -34,5 +34,23 @@ jobs:
       - name: Docusaurus Cache
         uses: docuactions/cache@v1
 
-      - name: Deploy page
-        uses: ayaka-notes/Docusaurus-GitPage-Action@v1.2
+      - name: Update Base URL
+        run: |
+          sed -i 's/baseUrl: "\//baseUrl: "\/Docusaurus-GitPage-Action\//g' docusaurus.config.ts
+
+      - name: Install pnpm
+        run: |
+          curl -L https://unpkg.com/@pnpm/self-installer | node
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Deploy
+        id: deployment
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: build
