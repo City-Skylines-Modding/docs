@@ -43,6 +43,9 @@ devDependencies:
   '@docusaurus/types':
     specifier: 3.4.0
     version: 3.4.0(react-dom@18.3.1)(react@18.3.1)
+  '@types/node':
+    specifier: ^20.14.6
+    version: 20.14.6
   typescript:
     specifier: ~5.2.2
     version: 5.2.2
@@ -3039,7 +3042,7 @@ packages:
   /@types/sax@1.2.7:
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.14.6
     dev: false
 
   /@types/send@0.17.4:

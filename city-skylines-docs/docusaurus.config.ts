@@ -99,6 +99,14 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
 
+    algolia: {
+      appId: "",
+      apiKey: "",
+      indexName: "City-Skylines-Moddingio",
+      contextualSearch: false,
+      searchParameters: {},
+    },
+
     webpack: {
       jsLoader: (isServer: boolean) => ({
         loader: require.resolve("swc-loader"),
