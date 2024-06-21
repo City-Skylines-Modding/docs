@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('city-skylines-docs/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('city-skylines-wiki/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
@@ -49,8 +49,8 @@ jobs:
         id: node-modules-cache
         uses: actions/cache@v3
         with:
-          path: city-skylines-docs/node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('city-skylines-docs/pnpm-lock.yaml') }}
+          path: city-skylines-wiki/node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('city-skylines-wiki/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node_modules-
 
@@ -63,17 +63,17 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-        working-directory: city-skylines-docs
+        working-directory: city-skylines-wiki
 
       - name: Build
         run: pnpm build
-        working-directory: city-skylines-docs
+        working-directory: city-skylines-wiki
 
       - name: Deploy
         id: deployment
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
-          folder: city-skylines-docs/dist
+          folder: city-skylines-wiki/dist
           token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
