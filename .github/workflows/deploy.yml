@@ -69,11 +69,17 @@ jobs:
         run: pnpm build
         working-directory: city-skylines-wiki
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           folder: city-skylines-wiki/build
-          token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set deployment URL output
+        run: echo "::set-output name=url::https://$GITHUB_REPOSITORY.github.io/$GITHUB_RUN_ID"
+
+      - name: Notify deployment URL
+        run: echo "Deployed to ${{ steps.deployment.outputs.url }}"
