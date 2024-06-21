@@ -2,7 +2,7 @@
 slug: /
 ---
 
-# Wiki
+# Introduction
 
 ![Banner](../static/img/banner.jpg)
 
