@@ -1,4 +1,4 @@
-version: 2
+version: 3
 updates:
   - package-ecosystem: "pnpm"
     directory: "/city-skylines-wiki"
@@ -12,4 +12,4 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "chore(deps): update"
+      prefix: "chore(deps): update GitHub actions"
