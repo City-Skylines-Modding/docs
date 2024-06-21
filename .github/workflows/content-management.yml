@@ -15,10 +15,12 @@ jobs:
           node-version: "18"
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: |
+          npm install -g pnpm
+          pnpm setup
 
       - name: Install markdown-toc
-        run: pnpm install markdown-toc -g
+        run: pnpm install -g markdown-toc
 
       - name: Generate Table of Contents
         run: markdown-toc -i Table-of-contents.md
