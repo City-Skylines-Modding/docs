@@ -1,0 +1,16 @@
+name: Code coverage report
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish Code Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report-${{ github.run_id }}
+          path: coverage
