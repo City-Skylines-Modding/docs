@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Modding Wiki",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Cities Skylines Modding Wiki",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Sidebar": {
+    "message": "Sidebar",
+    "description": "Navbar item with label Sidebar"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

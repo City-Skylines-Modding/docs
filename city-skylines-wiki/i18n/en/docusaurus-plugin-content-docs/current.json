@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.development": {
+    "message": "development",
+    "description": "The label for category development in sidebar docs"
+  },
+  "sidebar.docs.category.game_information": {
+    "message": "game_information",
+    "description": "The label for category game_information in sidebar docs"
+  },
+  "sidebar.docs.category.guidelines": {
+    "message": "guidelines",
+    "description": "The label for category guidelines in sidebar docs"
+  },
+  "sidebar.docs.category.guides": {
+    "message": "guides",
+    "description": "The label for category guides in sidebar docs"
+  },
+  "sidebar.docs.category.mods": {
+    "message": "mods",
+    "description": "The label for category mods in sidebar docs"
+  },
+  "sidebar.docs.category.standards": {
+    "message": "standards",
+    "description": "The label for category standards in sidebar docs"
+  },
+  "sidebar.docs.category.templates": {
+    "message": "templates",
+    "description": "The label for category templates in sidebar docs"
+  },
+  "sidebar.docs.category.issues": {
+    "message": "issues",
+    "description": "The label for category issues in sidebar docs"
+  },
+  "sidebar.docs.category.pull_requests": {
+    "message": "pull_requests",
+    "description": "The label for category pull_requests in sidebar docs"
+  }
+}
