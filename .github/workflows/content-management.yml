@@ -18,10 +18,11 @@ jobs:
         shell: bash
         run: |
           npm install -g pnpm
-          pnpm setup
+          pnpm --version
+          pnpm config set store-dir ~/.pnpm-store
 
-      - name: Install markdown-toc
+      - name: Install dependencies
         run: pnpm install -g markdown-toc
 
-      - name: Generate Table of Contents
-        run: markdown-toc -i Table-of-contents.md
+      - name: Generate downloadable file
+        run: pnpm run generate -i contents.md -o contents.md
