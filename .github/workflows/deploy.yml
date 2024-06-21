@@ -65,16 +65,7 @@ jobs:
         working-directory: city-skylines-wiki
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: city-skylines-wiki/build
-          clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set deployment URL output
-        run: echo "::set-output name=url::https://$GITHUB_REPOSITORY.github.io/$GITHUB_RUN_ID"
-
-      - name: Notify deployment URL
-        run: echo "Deployed to ${{ steps.deployment.outputs.url }}"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: city-skylines-wiki/build
