@@ -15,6 +15,7 @@ jobs:
           node-version: "18"
 
       - name: Install pnpm
+        shell: zsh
         run: |
           npm install -g pnpm
           pnpm setup
