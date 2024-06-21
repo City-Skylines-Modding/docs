@@ -13,5 +13,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "18"
-      - run: pnpm install markdown-toc -g
-      - run: markdown-toc -i Table-of-contents.md
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install markdown-toc
+        run: pnpm install markdown-toc -g
+
+      - name: Generate Table of Contents
+        run: markdown-toc -i Table-of-contents.md
