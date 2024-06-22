@@ -1,6 +1,6 @@
-import { themes as prismThemes } from "prism-react-renderer"
-import type { Config } from "@docusaurus/types"
-import type * as Preset from "@docusaurus/preset-classic"
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "My Site",
@@ -60,11 +60,24 @@ const config: Config = {
       ],
     },
 
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
+    },
+
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      defaultLanguage: "csharp",
+      additionalLanguages: ["csharp", "markdown"],
     },
   } satisfies Preset.ThemeConfig,
-}
+};
 
-export default config
+export default config;
