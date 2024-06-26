@@ -20,7 +20,7 @@ jobs:
           npm install -g pnpm
           pnpm --version
           pnpm config set store-dir ~/.pnpm-store
-          pnpm setup --shamefully-flatten
+          pnpm setup
 
       - name: Install dependencies
         run: pnpm install -g markdown-toc
