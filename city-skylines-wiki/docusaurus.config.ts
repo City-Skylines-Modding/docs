@@ -71,6 +71,16 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
 
+    // Optional Algolia search integration
+    algolia: {
+      appId: "IFUL51F360",
+      apiKey: "5f713a51386d2eb4c7b44ad524651b19",
+      indexName: "city-skylines-moddingio",
+      contextualSearch: true,
+      searchParameters: {},
+      insights: true,
+    },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

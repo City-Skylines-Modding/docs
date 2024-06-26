@@ -31,7 +31,7 @@ const sidebars: SidebarsConfig = {
           type: "category",
           label: "Development",
           items: [
-            "development/environment",
+            "development/environment-setup",
             {
               type: "category",
               label: "Standards",
