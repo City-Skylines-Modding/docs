@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcity_skylines_wiki=self.webpackChunkcity_skylines_wiki||[]).push([[560],{3560:(i,s,k)=>{k.r(s)}}]);

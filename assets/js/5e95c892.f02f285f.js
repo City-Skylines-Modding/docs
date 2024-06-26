@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcity_skylines_wiki=self.webpackChunkcity_skylines_wiki||[]).push([[647],{5017:(e,s,i)=>{i.r(s),i.d(s,{default:()=>k});i(758);var r=i(3526),c=i(5188),n=i(289),t=i(1977),u=i(9160),a=i(6070);function k(e){return(0,a.jsx)(c.e3,{className:(0,r.A)(n.G.wrapper.docsPages),children:(0,a.jsx)(u.A,{children:(0,t.v)(e.route.routes)})})}}}]);
